@@ -24,9 +24,9 @@ O projeto é uma aplicação web estática que renderiza as estratégias a parti
 A interface foi pensada para ser simples e intuitiva.
 
 **Navegue pelos Cards:** Role a página para ver as estratégias disponíveis.
-**Filtre sua Busca:** Use a barra de pesquisa e os filtros no topo da página para refinar os resultados de acordo com sua necessidade atual. Por exemplo, se estiver com baixa energia e precisando começar uma tarefa, filtre por Iniciação e Baixa Energia.
+**Filtre sua Busca:** Use a barra de pesquisa e os filtros no topo da página para refinar os resultados de acordo com sua necessidade atual.
 **Escolha uma Estratégia:** Clique no card que mais lhe agrada.
-**Aja Imediatamente:** No pop-up, leia o "Primeiro Passo Imediato", clique no ícone de cópia (content_copy) e cole onde for preciso (um novo arquivo, um chat, etc.) para começar agora mesmo!
+**Aja Imediatamente:** No pop-up, leia o "Primeiro Passo Imediato", clique no ícone de cópia (content_copy) e cole onde for preciso (um novo arquivo, um chat, etc.).
 
 **Como o Projeto Funciona (Estrutura Técnica)**
 O projeto é construído com tecnologias web fundamentais, sem a necessidade de frameworks complexos, tornando-o leve e fácil de manter.
@@ -42,4 +42,4 @@ JSON (infos.json): A base de dados que armazena todas as estratégias. A separa�
 
 **Agradecimentos**
 Obrigada por chegar até aqui!
-Meu coração TDAH transborda com a ideia de ganhar uma bolsa na FIAP, mas independente disso, já agradeço imensamente ao Gui, Monica e Ahirton por todo o aprendizado compartilhado pela Alura em suas imersões gratuitas.
+Meu coração TDAH transborda com a ideia de ganhar uma bolsa na FIAP, mas independente disso, já agradeço imensamente ao Gui, Monica e Ahirton por todo o aprendizado compartilhado pela Alura em suas imersões gratuitas e nesses 4 dias de aula. Eu sai do absoluto zero a um projeto cheio de propósito para mim. Nunca vou me esquecer dessa semana incrível. 
