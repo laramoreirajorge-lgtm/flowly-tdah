@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Conhecimento</title>
+    <!-- Link para o seu arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Bloco da Esquerda: Título -->
+        <div class="header-content">
+            <h1>Flowly</h1>
+            <p>A Knowledge Base de TDAHs Produtivos.</p>
+        </div>
+
+        <!-- Bloco Central: Busca -->
+        <div class="search-wrapper">
+            <input id="campo-busca" type="text" placeholder="Buscar por título ou tag...">
+            <button id="botao-busca">Buscar</button>
+        </div>
+
+        <!-- Bloco da Direita: Filtros -->
+        <div class="header-filters">
+            <div class="filter-group icon-filter" data-icon="bolt">
+                <select id="dopamine-filter">
+                    <option value="">Nível de Dopamina</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="filter-group icon-filter" data-icon="timer">
+                <select id="tempo-filter">
+                    <option value="">Tempo Estimado</option>
+                    <option value="curto">Menos de 30 min</option>
+                    <option value="medio">30 - 60 min</option>
+                    <option value="longo">Mais de 60 min</option>
+                </select>
+            </div>
+        </div>
+    </header>
+ 
+    <div class="tag-filters-wrapper">
+        <div class="tag-filters" id="tag-filters-container">
+            <!-- Filtros de TAGS serão inseridos aqui pelo JavaScript -->
+        </div>
+    </div>
+    <main id="cards-container">
+        <!-- Os cards de artigos serão inseridos aqui pelo JavaScript -->
+    </main>
+ 
+    <footer class="footer">
+        <div class="footer-location">Brasil</div>
+        <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/lara-moreira-jorge/">Sobre a criadora</a></li>
+            
+        </ul>
+    </footer>
+ 
+    <!-- Adicione a referência ao seu arquivo JavaScript aqui -->
+    <script src="script.js"></script>
+</body>
+</html>

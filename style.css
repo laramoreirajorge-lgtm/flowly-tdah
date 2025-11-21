@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Paleta "Deep Focus" para TDAH */
+    --bg-body: #0f172a;       /* Fundo ultra escuro (Slate 900) - Reduz ruído visual */
+    --bg-card: #1e293b;       /* Fundo do card (Slate 800) */
+    --bg-card-hover: #334155; /* Card ao passar o mouse */
+    
+    --font-title: "Garnett", "FixEmoji", sans-serif; /* Nova fonte para títulos */
+    /* Cores de Ação e Semântica */
+    --accent-lime: #d9fe89;   /* AÇÃO: Verde elétrico para botões/links */
+    --text-main: #f8fafc;     /* Texto quase branco (Slate 50) */
+    --text-primary: var(--text-main); /* Alias para a cor principal do texto */
+    --text-muted: #94a3b8;    /* Texto secundário (Slate 400) */
+    --text-secondary: var(--text-muted); /* Alias para a cor secundária do texto */
+    --border-color: rgba(255,255,255, 0.1); /* Cor de borda consistente */
+    
+    /* Níveis de Energia (Semáforo) */
+    --energy-low: #4ade80;    /* Verde */
+    --energy-med: #facc15;    /* Amarelo */
+    --energy-high: #f87171;   /* Vermelho */
+
+    /* Efeitos */
+    --glow-focus: 0 0 20px rgba(217, 254, 137, 0.15);
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --radius-lg: 16px;        /* Bordas mais arredondadas são mais amigáveis */
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased; /* Texto mais nítido */
+}
+
+/* =========================================
+   HEADER: O Centro de Comando
+   ========================================= */
+header {
+    padding: 2rem 3rem; /* Aumenta o "respiro" nas laterais */
+    display: flex; /* Alinha título e busca na horizontal */
+    flex-direction: row;
+    justify-content: space-between; /* Distribui os elementos */
+    align-items: center;
+    gap: 2rem; /* Adiciona um espaço entre o título e a busca */
+    position: sticky; /* Garante que o header fique fixo no topo */
+    top: 0;
+    background: rgba(15, 23, 42, 0.85); /* Efeito vidro fosco */
+    backdrop-filter: blur(12px);
+    z-index: 50;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Agrupador para título e parágrafo */
+header .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o texto à esquerda */
+}
+
+
+header h1 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin: 0;
+    background: linear-gradient(90deg, #fff, #94a3b8); /* Texto gradiente sutil */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Estilos para os filtros no header */
+.header-filters {
+    display: flex;
+    gap: 1rem; /* Espaço entre os filtros */
+    align-items: center;
+}
+
+/* Wrapper da Busca */
+header .search-wrapper {
+    position: relative;
+    width: auto; /* Ajustado para encolher com o conteúdo */
+    max-width: 400px; /* Largura máxima reduzida */
+    flex: 1 1 400px; /* Permite crescer e encolher, com base em 400px */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    overflow: hidden;
+    border-radius: 50px; /* Bordas totalmente arredondadas (estilo cápsula) */
+    background-color: transparent; /* Fundo do container transparente */
+    border: 1px solid rgba(255,255,255, 0.1);
+    transition: all 0.2s ease;
+}
+
+/* Ícone de Lupa dentro do input */
+header .search-wrapper::before {
+    content: "search";
+    font-family: 'Material Symbols Outlined'; /* Adicionado para usar a fonte de ícones */
+    font-weight: 300; /* Adicionado para o estilo outline */
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    z-index: 10;
+    color: #94a3b8; /* Ícone de lupa cinza sutil */
+}
+
+header .search-wrapper:focus-within {
+    border-color: var(--accent-lime);
+    box-shadow: var(--glow-focus);
+}
+
+input {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 3rem; /* Altura reduzida */
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: var(--text-main); /* Cor do texto digitado ajustada */
+    font-size: 1.1rem;
+    outline: none; /* Remove o contorno padrão ao focar */
+}
+
+input::placeholder {
+    color: #94a3b8; /* Placeholder cinza azulado */
+}
+
+input:focus {
+    background: transparent;
+}
+
+#botao-busca {
+    display: none; /* Botão de busca removido para um visual mais clean */
+}
+
+#botao-busca:hover {
+    filter: brightness(0.9); /* Escurece sutilmente no hover */
+}
+
+/* =========================================
+   FILTRO DE TAGS
+   ========================================= */
+.tag-filters-wrapper {
+    /* Este wrapper garante que o fundo se estenda pela largura total, se necessário */
+    padding-top: 1.5rem; /* Espaçamento acima dos filtros */
+}
+
+.tag-filters {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Alinha com as margens dos cards */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.filter-tag {
+    background: var(--bg-card);
+    color: var(--text-muted);
+    border: 1px solid rgba(255,255,255, 0.1);
+    padding: 6px 14px;
+    border-radius: 20px; /* Formato de pílula */
+    font-size: 0.9rem;
+    font-family: inherit; /* Garante que use a fonte 'Inter' */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-tag:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-main);
+}
+
+/* Estado ativo do botão de filtro */
+.filter-tag.active {
+    background: var(--accent-lime);
+    color: var(--bg-body);
+    font-weight: 600;
+    border-color: var(--accent-lime);
+}
+
+/* Estilos para os filtros de select */
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.filter-group label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.filter-group select {
+    background: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid rgba(255,255,255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.2s ease;
+    appearance: none; /* Remove a aparência padrão do sistema */
+}
+
+.filter-group select:focus {
+    border-color: var(--accent-lime);
+    box-shadow: var(--glow-focus);
+}
+
+.header-filters .filter-group { /* Remove regras antigas */
+    /* flex-direction: row; */
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Novo estilo para filtros com ícone */
+.icon-filter {
+    position: relative;
+}
+
+.icon-filter::before {
+    font-family: 'Material Symbols Outlined';
+    font-weight: 300;
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    z-index: 1;
+    color: var(--text-muted);
+    pointer-events: none; /* Permite clicar através do ícone */
+}
+
+.icon-filter select {
+    padding-left: 2.2rem; /* Adiciona espaço para o ícone */
+}
+
+/* Ícones específicos */
+.header-filters .filter-group[data-icon="bolt"]::before { content: 'bolt'; }
+.header-filters .filter-group[data-icon="timer"]::before { content: 'timer'; }
+
+ 
+/* =========================================
+   GRID PRINCIPAL
+   ========================================= */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    /* Grid responsivo inteligente */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 1.5rem;
+}
+
+/* =========================================
+   O CARD DE AÇÃO ("Action Card")
+   ========================================= */
+article {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255,255,255, 0.05);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+}
+
+/* Ícone Gigante (Emoji) */
+.card-icon {
+    /* Adicionado para usar a fonte de ícones */
+    font-family: 'Material Symbols Outlined';
+    font-weight: 300;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+/* Título do Card */
+article h2 {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+    color: var(--text-main);
+}
+
+/* Badge de Tempo (Novidade) */
+.time-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255,255,255, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+/* Ícone de tempo dentro do time-badge */
+.time-badge .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: 300;
+    font-size: 1rem; /* Ajuste o tamanho conforme necessário */
+}
+
+/* Texto "Nível de Dopamina" */
+.dopamine-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: auto; /* Empurra para o final do card */
+    padding-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Barra de Dopamina (Visualização do Nível 1-5) */
+.dopamine-meter {
+    display: flex;
+    gap: 4px;
+}
+
+.dopamine-dot {
+    height: 6px;
+    flex: 1;
+    background: rgba(255,255,255, 0.1);
+    border-radius: 2px;
+}
+
+.dopamine-dot.active {
+    background: var(--accent-lime);
+    box-shadow: 0 0 8px var(--accent-lime);
+}
+
+/* Tags */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.05);
+    color: var(--text-muted);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Mostra até 4 tags e esconde o restante para manter o card limpo */
+.tag:nth-child(n+5) {
+    display: none;
+}
+
+/* Ícone de Link Externo no canto */
+.external-link-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.external-link-icon:hover {
+    color: var(--accent-lime);
+    transform: scale(1.1);
+}
+
+article:hover {
+    transform: translateY(-4px);
+}
+/* =========================================
+   ESTADOS DE ENERGIA (Bordas Coloridas)
+   Aplique estas classes dinamicamente no React
+   ========================================= */
+article.energy-low { border-left: 4px solid var(--energy-low); }
+article.energy-med { border-left: 4px solid var(--energy-med); }
+article.energy-high { border-left: 4px solid var(--energy-high); }
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+.footer {
+    margin-top: 2rem; /* Altura reduzida */
+    padding: 1rem; /* Espaçamento interno reduzido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Espaçamento entre os itens */
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255,255,255, 0.05);
+    font-size: 0.8rem; /* Fonte um pouco menor */
+}
+
+/* Link no rodapé */
+.footer a {
+    color: var(--accent-lime); /* Cor #d9fe89 */
+    text-decoration: none; /* Remove sublinhado padrão */
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 768px) { /* Ponto de quebra ajustado para tablets e celulares */
+    header {
+        flex-direction: column; /* Empilha o título e a busca */
+        align-items: stretch; /* Faz os itens ocuparem a largura */
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .header-filters {
+        order: 2; /* Muda a ordem para os filtros ficarem no meio */
+    }
+
+    .search-wrapper {
+        order: 3; /* Muda a ordem para a busca ficar por último */
+    }
+
+    header .header-content {
+        order: 1; /* Título aparece primeiro */
+        align-items: center; /* Centraliza o texto em telas pequenas */
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header .search-wrapper { /* Wrapper da busca */
+        width: 100%; /* Ocupa toda a largura disponível */
+        max-width: none; /* Remove a largura máxima */
+    }
+}
+
+/* =========================================
+   POP-UP (MODAL)
+   ========================================= */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+}
+
+.popup-content {
+    background-color: var(--bg-card); /* Reutilizando a cor de fundo do card */
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 550px;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    border: 1px solid var(--border-color);
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8rem; /* Tamanho do ícone */
+    color: var(--text-muted);
+    cursor: pointer;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.popup-close:hover { color: var(--energy-high); transform: scale(1.1); }
+
+.popup-content h2 {
+    margin-top: 0;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.popup-section {
+    margin-top: 1.5rem;
+}
+
+.popup-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.popup-section strong {
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.popup-section p,
+.popup-section ul {
+    margin: 0;
+    padding-left: 0;
+    color: var(--text-primary);
+}
+
+.popup-section ul {
+    list-style-position: inside;
+}
+
+.popup-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* NOVO: Estilos para o rodapé do pop-up */
+.popup-footer {
+    margin-top: 2rem; /* Espaço acima do link */
+    padding-top: 1.5rem; /* Espaço interno superior */
+    border-top: 1px solid var(--border-color); /* Linha divisória */
+    text-align: center; /* Centraliza o link */
+}
+
+.external-link-popup {
+    display: inline-flex; /* Alinha ícone e texto */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 0.5rem; /* Espaço entre ícone e texto */
+    color: var(--accent-lime); /* Cor #d9fe89, conforme solicitado */
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.external-link-popup:hover {
+    filter: brightness(1.2); /* Deixa o link mais brilhante */
+    text-decoration: underline;
+}
+
+/* Estilos para o botão de copiar */
+.copy-button {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: var(--accent-lime);
+}
+
+.copy-button.copied {
+    color: var(--energy-low); /* Verde para indicar sucesso */
+}
+
+
+@media (max-width: 480px) {
+    .popup-content {
+        padding: 1.5rem;
+    }
+
+    .popup-content h2 {
+        font-size: 1.2rem;
+    }
+}

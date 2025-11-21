@@ -1,0 +1,372 @@
+[
+  {
+    "titulo_acao": "Ativar Modo Hiperfoco (Pomodoro)",
+    "icone_visual": "eco",
+    "tempo_estimado_minutos": 25,
+    "nivel_dopamina": 4,
+    "energia_necessaria": "Média",
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Abra uma nova aba no navegador e digite 'pomofocus.io'",
+      "checklist_chunked": [
+        "Escolha APENAS UMA tarefa para fazer agora",
+        "Dê o play no timer de 25 minutos",
+        "Trabalhe até o som tocar (proibido pausar)"
+      ]
+    },
+    "link_externo": "#",
+    "tags": [
+      "Foco",
+      "Tempo",
+      "Produtividade"
+    ]
+  },
+  {
+    "titulo_acao": "Silenciar o Cérebro (Ruído Marrom)",
+    "icone_visual": "headphones",
+    "tempo_estimado_minutos": 60,
+    "nivel_dopamina": 5,
+    "energia_necessaria": "Baixa",
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Coloque seus fones de ouvido (mesmo se estiverem desligados)",
+      "checklist_chunked": [
+        "Abra o Spotify ou YouTube",
+        "Busque por 'Brown Noise' ou 'Ruído Marrom'",
+        "Ajuste o volume até abafar os sons externos"
+      ]
+    },
+    "link_externo": "#",
+    "tags": [
+      "Sensorial",
+      "Calma",
+      "Áudio"
+    ]
+  },
+  {
+    "titulo_acao": "Sessão de Body Doubling",
+    "icone_visual": "groups",
+    "tempo_estimado_minutos": 50,
+    "nivel_dopamina": 3,
+    "energia_necessaria": "Alta",
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Envie uma mensagem para um amigo: 'Vamos trabalhar juntos em chamada?'",
+      "checklist_chunked": [
+        "Entre na chamada de vídeo ou discord",
+        "Digam um para o outro o que vão fazer",
+        "Mutem os microfones e comecem"
+      ]
+    },
+    "link_externo": "#",
+    "tags": [
+      "Social",
+      "Responsabilidade",
+      "Trabalho"
+    ]
+  },
+  {
+    "titulo_acao": "Criar o Plano dos 5 Minutos",
+    "icone_visual": "edit_note",
+    "tempo_estimado_minutos": 5,
+    "nivel_dopamina": 4,
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Abra a descrição do ticket mais assustador.",
+      "checklist_chunked": [
+        "Identifique o ponto de partida (Ex: Arquivo X, Função Y).",
+        "Escreva 3 micro-passos visíveis (Ex: Mudar nome, Adicionar teste, Logar).",
+        "Comece o primeiro micro-passo imediatamente."
+      ]
+    },
+    "link_externo": "#",
+    "energia_necessaria": "Média",
+    "tags": [
+      "Iniciação",
+      "Planejamento",
+      "Tickets"
+    ]
+  },
+  {
+    "titulo_acao": "Ativar Bloco de Silêncio Digital",
+    "icone_visual": "notifications_off",
+    "tempo_estimado_minutos": 30,
+    "nivel_dopamina": 3,
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Feche o Slack e arquive a notificação mais urgente.",
+      "checklist_chunked": [
+        "Use um bloqueador de websites (Freedom/Cold Turkey) para sites de distração.",
+        "Coloque o celular no modo 'Não Perturbe' e longe da vista.",
+        "Ligue uma música de foco (sem letras) ou ruído branco."
+      ]
+    },
+    "link_externo": "#",
+    "energia_necessaria": "Média",
+    "tags": [
+      "Foco",
+      "Interrupções",
+      "Ambiente"
+    ]
+  },
+  {
+    "titulo_acao": "Warm-up Coding de 10 Minutos",
+    "icone_visual": "coffee_maker",
+    "tempo_estimado_minutos": 10,
+    "nivel_dopamina": 4,
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Abra um arquivo de código irrelevante (sandbox ou arquivo antigo).",
+      "checklist_chunked": [
+        "Faça uma refatoração fácil ou adicione comentários simples.",
+        "Não se cobre por resultados. O objetivo é aquecer os dedos.",
+        "Transicione para a tarefa principal *após* o timer tocar."
+      ]
+    },
+    "link_externo": "#",
+    "energia_necessaria": "Baixa",
+    "tags": [
+      "Iniciação",
+      "Manhã",
+      "Rotina"
+    ]
+  },
+  {
+    "titulo_acao": "Adotar a Regra do 'Good Enough'",
+    "icone_visual": "check_circle",
+    "tempo_estimado_minutos": 1,
+    "nivel_dopamina": 5,
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Escreva 'PRONTO PARA ENVIO' (ou similar) no topo da sua tela.",
+      "checklist_chunked": [
+        "Pergunte: 'Isso resolve o problema principal?' (Ignore 80% dos 'e se...').",
+        "Se sim, pare de otimizar! Movimente o card para 'Revisão'.",
+        "Otimização viciante é procrastinação de alta performance. Cuidado!"
+      ]
+    },
+    "link_externo": "#",
+    "energia_necessaria": "Baixa",
+    "tags": [
+      "Perfeccionismo",
+      "Entrega",
+      "Mental Hack"
+    ]
+  },
+  {
+    "titulo_acao": "Falar Alto com o Pato (Debugging)",
+    "icone_visual": "psychology_alt",
+    "tempo_estimado_minutos": 15,
+    "nivel_dopamina": 4,
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Pegue um objeto inanimado (pato de borracha, caneca) ou levante-se da cadeira.",
+      "checklist_chunked": [
+        "Explique o código *linha por linha* como se a pessoa/objeto não soubesse programar.",
+        "Mantenha o foco em 'O que eu esperava?' vs 'O que aconteceu na verdade?'.",
+        "A resposta vem da audição, não do objeto. (Funciona!)"
+      ]
+    },
+    "link_externo": "#",
+    "energia_necessaria": "Alta",
+    "tags": [
+      "Depuração",
+      "Frustração",
+      "Resolução"
+    ]
+  },
+  {
+    "titulo_acao": "Calcular o 'Time Debt'",
+    "icone_visual": "history_toggle_off",
+    "tempo_estimado_minutos": 5,
+    "nivel_dopamina": 2,
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Abra um bloco de notas e anote 3 tarefas que você *subestimou* ultimamente.",
+      "checklist_chunked": [
+        "Anote a estimativa original (Ex: 1 hora) e o tempo real gasto (Ex: 4 horas).",
+        "Calcule a média de 'dívida de tempo' (Time Debt) (Ex: 4x mais).",
+        "Multiplique futuras estimativas por essa métrica de 'Time Debt' para calibração."
+      ]
+    },
+    "link_externo": "#",
+    "energia_necessaria": "Média",
+    "tags": [
+      "Cegueira Temporal",
+      "Planejamento",
+      "Transparência"
+    ]
+  },
+  {
+    "titulo_acao": "Agrupar 3 Tasks Similares (Batching)",
+    "icone_visual": "inventory_2",
+    "tempo_estimado_minutos": 45,
+    "nivel_dopamina": 3,
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Filtre seu backlog por 'Documentação' ou 'Pequenos Ajustes CSS'.",
+      "checklist_chunked": [
+        "Comprometa-se a fazer 3 tarefas do mesmo tipo *em sequência*.",
+        "Isso economiza energia de 'context switching' (o terror do TDAH).",
+        "Se a primeira tarefa demorar mais de 20 minutos, pare e reagrupe."
+      ]
+    },
+    "link_externo": "#",
+    "energia_necessaria": "Média",
+    "tags": [
+      "Troca de Contexto",
+      "Organização",
+      "Eficiência"
+    ]
+  },
+  {
+    "titulo_acao": "Zerar Abas com Session Manager",
+    "icone_visual": "tab_group",
+    "tempo_estimado_minutos": 3,
+    "nivel_dopamina": 5,
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Feche as abas menos importantes, deixando no máximo 5 abas ativas.",
+      "checklist_chunked": [
+        "Salve o conjunto atual de abas abertas usando uma extensão (Session Buddy, etc.).",
+        "Feche a janela inteira e abra uma nova com apenas o necessário para a tarefa.",
+        "O alívio visual de 'zero abas' é uma micro-recompensa imediata."
+      ]
+    },
+    "link_externo": "#",
+    "energia_necessaria": "Baixa",
+    "tags": [
+      "Organização Digital",
+      "Clareza Mental",
+      "Limpeza"
+    ]
+  },
+  {
+    "titulo_acao": "Fazer a Auto-Revisão de 2 Minutos",
+    "icone_visual": "double_arrow",
+    "tempo_estimado_minutos": 2,
+    "nivel_dopamina": 3,
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Respire fundo e prepare-se para escanear o código em alta velocidade.",
+      "checklist_chunked": [
+        "Role o código de cima para baixo em menos de 60 segundos.",
+        "Busque padrões de cores (Erros do linter) ou nomes de variáveis estranhos.",
+        "Não pare para corrigir. Apenas localize os pontos problemáticos para o segundo passo."
+      ]
+    },
+    "link_externo": "#",
+    "energia_necessaria": "Baixa",
+    "tags": [
+      "Revisão",
+      "Qualidade",
+      "Verificação"
+    ]
+  },
+  {
+    "titulo_acao": "O Bloco de 8 Minutos",
+    "icone_visual": "battery_charging_full",
+    "tempo_estimado_minutos": 8,
+    "nivel_dopamina": 3,
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Configure um timer (de preferência visual) para exatos 8 minutos.",
+      "checklist_chunked": [
+        "Escolha a tarefa mais fácil/chata que está procrastinando (Ex: Responder 2 emails).",
+        "Prometa a si mesmo parar *imediatamente* quando o timer tocar.",
+        "Use isso como um 'impulso'. Muitas vezes, você continua por 8 minutos extras de foco."
+      ]
+    },
+    "link_externo": "#",
+    "energia_necessaria": "Baixa",
+    "tags": [
+      "Iniciação",
+      "Baixa Energia",
+      "Impulso"
+    ]
+  },
+  {
+    "titulo_acao": "Meditação Guiada Rápida",
+    "icone_visual": "self_improvement",
+    "tempo_estimado_minutos": 10,
+    "nivel_dopamina": 3,
+    "energia_necessaria": "Baixa",
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Encontre um local tranquilo e sente-se confortavelmente.",
+      "checklist_chunked": [
+        "Abra um aplicativo de meditação (ex: Calm, Headspace)",
+        "Escolha uma meditação guiada de 5-10 minutos",
+        "Concentre-se na sua respiração"
+      ]
+    },
+    "link_externo": "#",
+    "tags": [
+      "Calma",
+      "Foco",
+      "Bem-estar"
+    ]
+  },
+  {
+    "titulo_acao": "Revisão de Código por Pares (Quick Review)",
+    "icone_visual": "code_blocks",
+    "tempo_estimado_minutos": 20,
+    "nivel_dopamina": 4,
+    "energia_necessaria": "Média",
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Peça a um colega para dar uma olhada rápida no seu PR.",
+      "checklist_chunked": [
+        "Explique o contexto do código em 2 minutos",
+        "Peça feedback sobre um ponto específico",
+        "Anote as sugestões e agradeça"
+      ]
+    },
+    "link_externo": "#",
+    "tags": [
+      "Colaboração",
+      "Qualidade",
+      "Produtividade"
+    ]
+  },
+  {
+    "titulo_acao": "Limpeza de Caixa de Entrada (Inbox Zero)",
+    "icone_visual": "inbox",
+    "tempo_estimado_minutos": 15,
+    "nivel_dopamina": 3,
+    "energia_necessaria": "Baixa",
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Abra sua caixa de entrada e ordene por remetente.",
+      "checklist_chunked": [
+        "Delete e-mails desnecessários",
+        "Responda e-mails rápidos (<2 min)",
+        "Mova e-mails que exigem mais tempo para uma pasta 'A Fazer'"
+      ]
+    },
+    "link_externo": "#",
+    "tags": [
+      "Organização",
+      "Eficiência",
+      "Limpeza"
+    ]
+  },
+  {
+    "titulo_acao": "Micro-Break Ativo",
+    "icone_visual": "directions_walk",
+    "tempo_estimado_minutos": 5,
+    "nivel_dopamina": 4,
+    "energia_necessaria": "Baixa",
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Levante-se da cadeira e estique os braços para cima.",
+      "checklist_chunked": ["Faça 10 polichinelos ou suba/desça escadas", "Beba um copo d'água", "Olhe pela janela por 30 segundos"]
+    },
+    "link_externo": "#",
+    "tags": ["Bem-estar", "energia", "Foco"]
+  },
+  {
+    "titulo_acao": "Revisar Pull Request Rápido",
+    "icone_visual": "fact_check",
+    "tempo_estimado_minutos": 15,
+    "nivel_dopamina": 3,
+    "energia_necessaria": "Média",
+    "conteudo_verso": {
+      "primeiro_passo_imediato": "Abra a lista de Pull Requests e escolha o mais antigo ou o mais simples.",
+      "checklist_chunked": [
+        "Leia a descrição do PR para entender o contexto.",
+        "Foque em lógica, clareza e se o código resolve o problema proposto.",
+        "Deixe comentários construtivos e aprove se estiver tudo certo."
+      ]
+    },
+    "link_externo": "#",
+    "tags": [
+      "Colaboração",
+      "Qualidade",
+      "Revisão"
+    ]
+  }
+]
